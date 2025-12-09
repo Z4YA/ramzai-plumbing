@@ -1,0 +1,42 @@
+# Robots.txt for Ramzai Plumbing
+# https://www.ramzaiplumbing.com.au
+
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Disallow admin and private directories
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /*.json$
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://www.ramzaiplumbing.com.au/sitemap.xml
+
+# Google-specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing-specific
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /images/
+
+# Allow social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /

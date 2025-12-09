@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://www.ramzaiplumbing.com.au/</loc>
+        <lastmod>2024-12-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://www.ramzaiplumbing.com.au/images/og-image.jpg</image:loc>
+            <image:title>Ramzai Plumbing - Professional Plumbing Services Sydney</image:title>
+            <image:caption>Licensed plumbers providing 24/7 emergency plumbing services across Greater Sydney</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Services Section -->
+    <url>
+        <loc>https://www.ramzaiplumbing.com.au/#services</loc>
+        <lastmod>2024-12-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- About Section -->
+    <url>
+        <loc>https://www.ramzaiplumbing.com.au/#about</loc>
+        <lastmod>2024-12-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Service Areas Section -->
+    <url>
+        <loc>https://www.ramzaiplumbing.com.au/#service-areas</loc>
+        <lastmod>2024-12-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Testimonials Section -->
+    <url>
+        <loc>https://www.ramzaiplumbing.com.au/#testimonials</loc>
+        <lastmod>2024-12-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- FAQ Section -->
+    <url>
+        <loc>https://www.ramzaiplumbing.com.au/#faq</loc>
+        <lastmod>2024-12-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Contact Section -->
+    <url>
+        <loc>https://www.ramzaiplumbing.com.au/#contact</loc>
+        <lastmod>2024-12-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+</urlset>

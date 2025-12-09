@@ -1,0 +1,43 @@
+{
+    "name": "Ramzai Plumbing - Sydney Plumbers",
+    "short_name": "Ramzai Plumbing",
+    "description": "Professional plumbing services in Greater Sydney. 24/7 emergency plumbing, blocked drains, hot water repairs, gas fitting & renovations.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0066cc",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "en-AU",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["business", "utilities"],
+    "shortcuts": [
+        {
+            "name": "Call Now",
+            "short_name": "Call",
+            "description": "Call our emergency plumbing hotline",
+            "url": "tel:0400000000",
+            "icons": [{ "src": "/icons/phone.png", "sizes": "96x96" }]
+        },
+        {
+            "name": "Get Quote",
+            "short_name": "Quote",
+            "description": "Request a free plumbing quote",
+            "url": "/#contact",
+            "icons": [{ "src": "/icons/quote.png", "sizes": "96x96" }]
+        }
+    ]
+}
