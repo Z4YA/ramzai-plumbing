@@ -369,12 +369,13 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
 
             const formData = new FormData(contactForm);
             const data = Object.fromEntries(formData.entries());
 
+            // Client-side validation
             if (!data.name || !data.email || !data.phone) {
                 showNotification('Please fill in all required fields.', 'error');
                 return;
@@ -400,15 +401,33 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.innerHTML = '<span class="spinner"></span> Sending...';
             submitBtn.disabled = true;
 
-            setTimeout(() => {
-                showNotification('Thank you! Your message has been sent. We\'ll get back to you shortly.', 'success');
-                contactForm.reset();
+            try {
+                // Send to Vercel serverless function
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    showNotification(result.message, 'success');
+                    contactForm.reset();
+                    // Celebration animation
+                    createConfetti();
+                } else {
+                    showNotification(result.message || 'Something went wrong. Please try again.', 'error');
+                }
+            } catch (error) {
+                console.error('Form submission error:', error);
+                showNotification('Connection error. Please call us directly at 0400 000 000.', 'error');
+            } finally {
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
-
-                // Celebration animation
-                createConfetti();
-            }, 1500);
+            }
         });
     }
 
