@@ -135,7 +135,7 @@ export default async function handler(req, res) {
                     <li>✓ 24/7 Emergency Service</li>
                     <li>✓ Upfront Fixed Pricing</li>
                     <li>✓ Same Day Service Available</li>
-                    <li>✓ 15+ Years Experience</li>
+                    <li>✓ 10+ Years Experience</li>
                 </ul>
             </div>
             <div style="padding: 20px; text-align: center; background: #1a1a2e; color: #9ca3af; font-size: 12px;">
