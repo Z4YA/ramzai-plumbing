@@ -129,7 +129,13 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 const statNumbers = entry.target.querySelectorAll('.stat-number');
                 statNumbers.forEach(stat => {
-                    const text = stat.textContent;
+                    const text = stat.textContent.trim();
+
+                    // Skip animation for non-numeric values like "24/7"
+                    if (text === '24/7') {
+                        return;
+                    }
+
                     const number = parseInt(text.replace(/\D/g, ''));
                     const suffix = text.replace(/[0-9]/g, '');
                     stat.dataset.suffix = suffix;
