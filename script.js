@@ -199,20 +199,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const tiltCards = document.querySelectorAll('.service-card, .testimonial-card');
 
     tiltCards.forEach(card => {
+        // Set initial transition for smooth effect
+        card.style.transition = 'transform 0.15s ease-out, box-shadow 0.3s ease';
+
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px)';
+        });
+
         card.addEventListener('mousemove', function(e) {
             const rect = this.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
-            const rotateX = (y - centerY) / 20;
-            const rotateY = (centerX - x) / 20;
+            const rotateX = (y - centerY) / 15;
+            const rotateY = (centerX - x) / 15;
 
             this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
         });
 
         card.addEventListener('mouseleave', function() {
-            this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+            this.style.transform = 'translateY(0)';
         });
     });
 
